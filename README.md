@@ -7,16 +7,16 @@ A high-integrity currency conversion engine implemented in Haskell, leveraging r
 The system models currency conversion as a linear transformation over the field of real numbers, constrained by time-variant exchange rate coefficients.
 
 ### 1.1. Core Transformation
-Given a source amount $a \in \mathbb{R}^{+}$, a source currency $C_{src}$, and a target currency $C_{target}$, the converted amount $a'$ is computed as:
+Given a source amount $a \in \mathbb{R}^{+}$, a source currency $C(src)$, and a target currency $C(target)$, the converted amount $a'$ is computed as:
 
-$$a' = a \times \mathcal{R}(C_{src}, C_{target}, t)$$
+$$a' = a \times \mathcal{R}(C(src), C(target), t)$$
 
 where $\mathcal{R}$ is the exchange rate function at time $t$.
 
 ### 1.2. Rate Discovery
 The exchange rate is derived from a base-relative mapping provided by the Frankfurter API. For a base currency $B$:
 
-$$\mathcal{R}(B, C_i, t) = \text{API-Response}(B, t)[C_i]$$
+$$\mathcal{R}(B, C(i), t) = \text{API-Response}(B, t)[C(i)]$$
 
 ## 2. Technical Architecture
 
