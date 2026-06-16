@@ -16,7 +16,7 @@ where $\mathcal{R}$ is the exchange rate function at time $t$.
 ### 1.2. Rate Discovery
 The exchange rate is derived from a base-relative mapping provided by the Frankfurter API. For a base currency $B$:
 
-$$\mathcal{R}(B, C_i, t) = \text{API\_Response}(B, t)[C_i]$$
+$$\mathcal{R}(B, C_i, t) = \text{API-Response}(B, t)[C_i]$$
 
 ## 2. Technical Architecture
 
